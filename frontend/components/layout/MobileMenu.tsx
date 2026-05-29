@@ -12,6 +12,10 @@ const navLinks = [
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/quiz", label: "🎂 Cake Quiz" },
+  { href: "/festive", label: "🪤 Festive" },
+  { href: "/community", label: "📸 Gallery" },
+  { href: "/group-gift", label: "🎁 Group Gift" },
 ];
 
 interface MobileMenuProps {

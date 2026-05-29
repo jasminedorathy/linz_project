@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Check, ChevronRight, ChevronLeft, Sparkles, Cake, HelpCircle, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import CakePreview from "@/components/ui/CakePreview";
 
 const cakeSchema = z.object({
   shape: z.enum(["round", "square", "heart"]),
@@ -514,6 +515,18 @@ export default function CustomCakePage() {
           {/* Pricing Summary Sidebar */}
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-white rounded-3xl p-6 shadow-sm sticky top-28 space-y-6 border border-gray-100">
+
+              {/* Live Cake Preview */}
+              <div className="border-b pb-6">
+                <CakePreview
+                  shape={watchShape}
+                  size={watchSize}
+                  flavour={watchFlavour}
+                  frosting={watchFrosting}
+                  decorations={watchDecorations}
+                />
+              </div>
+
               <h3 className="font-bold text-lg border-b pb-3" style={{ fontFamily: "var(--font-heading)" }}>
                 Selected Aesthetics
               </h3>

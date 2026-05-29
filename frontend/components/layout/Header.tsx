@@ -13,8 +13,10 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/menu", label: "Menu" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "Blog" },
+  { href: "/quiz", label: "🎂 Cake Quiz" },
+  { href: "/festive", label: "🪔 Festive" },
+  { href: "/community", label: "📸 Community" },
+  { href: "/group-gift", label: "🎁 Group Gift" },
   { href: "/contact", label: "Contact" },
 ];
 
