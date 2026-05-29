@@ -6,7 +6,7 @@ export const menuItems: MenuItem[] = [
     name: "Classic Chocolate Cake",
     category: "Cakes",
     description: "Rich chocolate layers with fudge frosting.",
-    price: 45.0,
+    price: 850,
     image: "/images/cake-1.png",
     featured: true,
   },
@@ -15,7 +15,7 @@ export const menuItems: MenuItem[] = [
     name: "Strawberry Shortcake",
     category: "Cakes",
     description: "Light sponge with fresh strawberries and cream.",
-    price: 40.0,
+    price: 750,
     image: "/images/cake-2.png",
   },
   {
@@ -23,7 +23,7 @@ export const menuItems: MenuItem[] = [
     name: "Almond Croissant",
     category: "Pastries",
     description: "Flaky pastry filled with sweet almond paste.",
-    price: 4.5,
+    price: 120,
     image: "/images/pastry-1.png",
     featured: true,
   },
@@ -32,7 +32,7 @@ export const menuItems: MenuItem[] = [
     name: "Blueberry Muffin",
     category: "Pastries",
     description: "Freshly baked muffins loaded with wild blueberries.",
-    price: 3.5,
+    price: 80,
     image: "/images/pastry-2.png",
   },
   {
@@ -40,7 +40,8 @@ export const menuItems: MenuItem[] = [
     name: "Caramel Macchiato",
     category: "Drinks",
     description: "Espresso with vanilla syrup, milk and caramel drizzle.",
-    price: 5.0,
+    price: 150,
     image: "/images/drink-1.png",
   }
 ];
+

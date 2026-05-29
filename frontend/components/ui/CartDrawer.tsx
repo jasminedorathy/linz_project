@@ -82,7 +82,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-gray-50 flex-shrink-0">
                       <Image
                         src={item.product.image}
-                        alt={item.product.title}
+                        alt={item.product.name}
                         fill
                         className="object-cover"
                         sizes="80px"
@@ -92,7 +92,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                       <div>
                         <div className="flex justify-between items-start">
                           <h4 className="font-semibold text-sm leading-tight text-gray-800">
-                            {item.product.title}
+                            {item.product.name}
                           </h4>
                           <button
                             onClick={() => removeFromCart(item.product.id)}
@@ -124,7 +124,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                         {/* Price */}
                         <span className="font-semibold text-sm" style={{ color: "var(--color-primary)" }}>
-                          ${(item.product.price * item.quantity).toFixed(2)}
+                          ₹{(item.product.price * item.quantity).toFixed(0)}
                         </span>
                       </div>
                     </div>
@@ -138,7 +138,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
               <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-4">
                 <div className="flex justify-between text-base font-bold text-gray-900">
                   <span>Subtotal</span>
-                  <span>${cartTotal.toFixed(2)}</span>
+                  <span>₹{cartTotal.toFixed(0)}</span>
                 </div>
                 <p className="text-xs text-gray-400">
                   Taxes, shipping, or pickup fees calculated at checkout.

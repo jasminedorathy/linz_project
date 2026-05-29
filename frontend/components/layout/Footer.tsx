@@ -123,23 +123,23 @@ export default function Footer() {
           <ul className="flex flex-col gap-4">
             <li className="flex gap-3 text-sm">
               <MapPin size={16} className="flex-shrink-0 mt-0.5" style={{ color: "var(--color-primary)" }} />
-              <span>123 Bakery Lane, Sweet Town, CA 90210</span>
+              <span>42, Anna Salai, Nungambakkam, Chennai – 600 006, Tamil Nadu</span>
             </li>
             <li className="flex gap-3 text-sm">
               <Phone size={16} className="flex-shrink-0" style={{ color: "var(--color-primary)" }} />
-              <a href="tel:+15551234567" className="hover:text-[var(--color-primary)] transition-colors">
-                +1 (555) 123-4567
+              <a href="tel:+919876543210" className="hover:text-[var(--color-primary)] transition-colors">
+                +91 98765 43210
               </a>
             </li>
             <li className="flex gap-3 text-sm">
               <Mail size={16} className="flex-shrink-0" style={{ color: "var(--color-primary)" }} />
-              <a href="mailto:hello@bellaria.com" className="hover:text-[var(--color-primary)] transition-colors">
-                hello@bellaria.com
+              <a href="mailto:hello@bellaria.in" className="hover:text-[var(--color-primary)] transition-colors">
+                hello@bellaria.in
               </a>
             </li>
             <li className="flex gap-3 text-sm">
               <Clock size={16} className="flex-shrink-0 mt-0.5" style={{ color: "var(--color-primary)" }} />
-              <span>Mon–Sat: 7:00 AM – 9:00 PM<br />Sun: 8:00 AM – 6:00 PM</span>
+              <span>Mon–Sat: 8:00 AM – 9:00 PM<br />Sun: 9:00 AM – 6:00 PM</span>
             </li>
           </ul>
         </div>

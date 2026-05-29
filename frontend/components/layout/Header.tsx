@@ -52,13 +52,13 @@ export default function Header() {
         style={{ backgroundColor: "var(--color-primary)", color: "#fff" }}
       >
         <div className="flex items-center gap-6">
-          <a href="tel:+15551234567" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="tel:+919876543210" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Phone size={12} />
-            +1 (555) 123-4567
+            +91 98765 43210
           </a>
-          <a href="mailto:hello@bellaria.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="mailto:hello@bellaria.in" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Mail size={12} />
-            hello@bellaria.com
+            hello@bellaria.in
           </a>
         </div>
         <div className="flex items-center gap-4">

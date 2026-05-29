@@ -18,10 +18,10 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const contactInfo = [
-  { icon: MapPin, label: "Address",   value: "123 Bakery Lane, Sweet Town, CA 90210" },
-  { icon: Phone,  label: "Phone",     value: "+1 (555) 123-4567" },
-  { icon: Mail,   label: "Email",     value: "hello@bellaria.com" },
-  { icon: Clock,  label: "Hours",     value: "Mon–Sat 7AM–9PM · Sun 8AM–6PM" },
+  { icon: MapPin, label: "Address",   value: "42, Anna Salai, Nungambakkam, Chennai – 600 006, Tamil Nadu" },
+  { icon: Phone,  label: "Phone",     value: "+91 98765 43210" },
+  { icon: Mail,   label: "Email",     value: "hello@bellaria.in" },
+  { icon: Clock,  label: "Hours",     value: "Mon–Sat 8AM–9PM · Sun 9AM–6PM" },
 ];
 
 export default function ContactPage() {

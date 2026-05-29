@@ -26,37 +26,37 @@ type CakeForm = z.infer<typeof cakeSchema>;
 
 const shapes = [
   { id: "round", label: "Classic Round", desc: "Perfect for any celebration", extraPrice: 0 },
-  { id: "square", label: "Modern Square", desc: "Clean lines and geometric style", extraPrice: 5 },
-  { id: "heart", label: "Romantic Heart", desc: "Ideal for anniversaries & weddings", extraPrice: 10 },
+  { id: "square", label: "Modern Square", desc: "Clean lines and geometric style", extraPrice: 200 },
+  { id: "heart", label: "Romantic Heart", desc: "Ideal for anniversaries & weddings", extraPrice: 400 },
 ];
 
 const sizes = [
-  { id: "6inch", label: '6" Round / Square', desc: "Serves 8-10 people", basePrice: 35 },
-  { id: "8inch", label: '8" Round / Square', desc: "Serves 15-20 people", basePrice: 50 },
-  { id: "10inch", label: '10" Round / Square', desc: "Serves 25-30 people", basePrice: 70 },
-  { id: "2tier", label: '2-Tier Cake (6" + 8")', desc: "Serves 35-45 people", basePrice: 120 },
+  { id: "6inch", label: '6" Round / Square', desc: "Serves 8-10 people", basePrice: 1200 },
+  { id: "8inch", label: '8" Round / Square', desc: "Serves 15-20 people", basePrice: 1800 },
+  { id: "10inch", label: '10" Round / Square', desc: "Serves 25-30 people", basePrice: 2500 },
+  { id: "2tier", label: '2-Tier Cake (6" + 8")', desc: "Serves 35-45 people", basePrice: 4200 },
 ];
 
 const flavours = [
   { id: "vanilla", label: "Madagascar Vanilla Bean", desc: "Classic white sponge with vanilla seed buttercream", extraPrice: 0 },
   { id: "chocolate", label: "Double Chocolate Decadence", desc: "Rich chocolate sponge with chocolate ganache frosting", extraPrice: 0 },
-  { id: "redvelvet", label: "Velvety Red Velvet", desc: "Traditional red velvet sponge with cream cheese filling", extraPrice: 5 },
-  { id: "lemon", label: "Zesty Lemon Berry", desc: "Lemon sponge infused with fresh raspberry compote", extraPrice: 8 },
-  { id: "caramel", label: "Salted Caramel Drip", desc: "Caramel sponge with buttercream & salted caramel drip", extraPrice: 8 },
+  { id: "redvelvet", label: "Velvety Red Velvet", desc: "Traditional red velvet sponge with cream cheese filling", extraPrice: 200 },
+  { id: "lemon", label: "Zesty Lemon Berry", desc: "Lemon sponge infused with fresh raspberry compote", extraPrice: 300 },
+  { id: "caramel", label: "Salted Caramel Drip", desc: "Caramel sponge with buttercream & salted caramel drip", extraPrice: 300 },
 ];
 
 const frostings = [
   { id: "buttercream_smooth", label: "Smooth Buttercream", desc: "Silky exterior style", extraPrice: 0 },
   { id: "buttercream_rustic", label: "Rustic Semi-Naked", desc: "Thin coat with cake showing through", extraPrice: 0 },
-  { id: "fondant", label: "Sleek Fondant Finish", desc: "Perfect canvas for heavy/intricate decoration", extraPrice: 15 },
+  { id: "fondant", label: "Sleek Fondant Finish", desc: "Perfect canvas for heavy/intricate decoration", extraPrice: 500 },
 ];
 
 const decorationOptions = [
-  { id: "fresh_berries", label: "Fresh Seasonal Berries", desc: "Strawberries, blueberries & raspberries", price: 12 },
-  { id: "macarons", label: "Sweet French Macarons", desc: "Artisanal bakery macarons", price: 15 },
-  { id: "piped_flowers", label: "Buttercream Piped Flowers", desc: "Hand-piped floral accents", price: 10 },
-  { id: "gold_leaf", label: "24K Edible Gold Leaf", desc: "Glamorous metallic flakes", price: 18 },
-  { id: "chocolate_drip", label: "Rich Chocolate Ganache Drip", desc: "Classic drip down the sides", price: 8 },
+  { id: "fresh_berries", label: "Fresh Seasonal Berries", desc: "Strawberries, blueberries & raspberries", price: 400 },
+  { id: "macarons", label: "Sweet French Macarons", desc: "Artisanal bakery macarons", price: 550 },
+  { id: "piped_flowers", label: "Buttercream Piped Flowers", desc: "Hand-piped floral accents", price: 350 },
+  { id: "gold_leaf", label: "24K Edible Gold Leaf", desc: "Glamorous metallic flakes", price: 650 },
+  { id: "chocolate_drip", label: "Rich Chocolate Ganache Drip", desc: "Classic drip down the sides", price: 280 },
 ];
 
 export default function CustomCakePage() {
@@ -268,7 +268,7 @@ export default function CustomCakePage() {
                               <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
                               <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
                               <p className="text-sm font-semibold mt-2" style={{ color: "var(--color-primary)" }}>
-                                Base: ${item.basePrice}
+                                Base: ₹{item.basePrice}
                               </p>
                             </button>
                           ))}
@@ -309,7 +309,7 @@ export default function CustomCakePage() {
                               <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
                               {item.extraPrice > 0 && (
                                 <p className="text-xs font-semibold mt-2 text-amber-600">
-                                  +${item.extraPrice}
+                                  +₹{item.extraPrice}
                                 </p>
                               )}
                             </button>
@@ -340,7 +340,7 @@ export default function CustomCakePage() {
                               <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
                               {item.extraPrice > 0 && (
                                 <p className="text-xs font-semibold mt-2 text-amber-600">
-                                  +${item.extraPrice}
+                                  +₹{item.extraPrice}
                                 </p>
                               )}
                             </button>
@@ -391,7 +391,7 @@ export default function CustomCakePage() {
                                 )}
                                 <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
                                 <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
-                                <p className="text-xs font-semibold mt-2 text-amber-600">+${item.price}</p>
+                                <p className="text-xs font-semibold mt-2 text-amber-600">+₹{item.price}</p>
                               </button>
                             );
                           })}
@@ -527,7 +527,7 @@ export default function CustomCakePage() {
                     </p>
                   </div>
                   <span className="font-semibold text-gray-800">
-                    ${baseSizePrice + shapeAddon}
+                    ₹{baseSizePrice + shapeAddon}
                   </span>
                 </div>
 
@@ -541,7 +541,7 @@ export default function CustomCakePage() {
                     </p>
                   </div>
                   <span className="font-semibold text-gray-800">
-                    ${flavourAddon + frostingAddon}
+                    ₹{flavourAddon + frostingAddon}
                   </span>
                 </div>
 
@@ -553,7 +553,7 @@ export default function CustomCakePage() {
                       return (
                         <div key={dId} className="flex justify-between text-xs text-gray-600">
                           <span>{item?.label}</span>
-                          <span className="font-medium">+${item?.price}</span>
+                          <span className="font-medium">+₹{item?.price}</span>
                         </div>
                       );
                     })}
@@ -564,7 +564,7 @@ export default function CustomCakePage() {
                   <span className="flex items-center gap-1.5">
                     <Sparkles size={16} className="text-amber-500" /> Estimate
                   </span>
-                  <span style={{ color: "var(--color-primary)" }}>${totalPrice.toFixed(2)}</span>
+                  <span style={{ color: "var(--color-primary)" }}>₹{totalPrice.toFixed(0)}</span>
                 </div>
               </div>
             </div>
