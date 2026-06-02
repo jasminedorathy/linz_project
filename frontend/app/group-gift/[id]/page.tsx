@@ -66,7 +66,7 @@ export default function GroupGiftContributePage() {
 
   const percent = Math.min(Math.round((gift.collected / gift.target) * 100), 100);
   const remaining = gift.target - gift.collected;
-  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-amber-200 bg-white";
+  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-pink-200 bg-white";
 
   return (
     <>
@@ -88,7 +88,7 @@ export default function GroupGiftContributePage() {
               {gift.message && <p className="text-sm text-gray-500 italic mt-2">"{gift.message}"</p>}
             </div>
 
-            <div className="bg-amber-50 rounded-2xl p-4 flex items-center gap-3">
+            <div className="bg-pink-50 rounded-2xl p-4 flex items-center gap-3">
               <span className="text-3xl">{gift.cake.emoji}</span>
               <div>
                 <p className="font-bold text-sm text-gray-800">{gift.cake.name}</p>
@@ -149,7 +149,7 @@ export default function GroupGiftContributePage() {
               <div className="flex gap-2 flex-wrap">
                 {[100, 200, 500].map((amt) => (
                   <button key={amt} onClick={() => setForm({ ...form, amount: String(amt) })}
-                    className="px-3 py-1.5 rounded-full text-xs font-bold border border-amber-300 text-amber-700 bg-amber-50 hover:bg-amber-100 transition-colors">
+                    className="px-3 py-1.5 rounded-full text-xs font-bold border border-pink-300 text-pink-700 bg-pink-50 hover:bg-pink-100 transition-colors">
                     ₹{amt}
                   </button>
                 ))}

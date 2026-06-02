@@ -37,7 +37,7 @@ export default async function BlogPostPage({
       {/* Hero image */}
       <div className="relative h-72 md:h-96 w-full">
         <Image src={post.image} alt={post.title} fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-pink-950/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <span
             className="text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4"

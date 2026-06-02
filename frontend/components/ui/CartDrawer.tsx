@@ -25,7 +25,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black z-50 cursor-pointer"
+            className="fixed inset-0 bg-pink-950 z-50 cursor-pointer"
           />
 
           {/* Drawer content */}
@@ -109,14 +109,14 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         <div className="flex items-center border border-gray-200 rounded-full px-1">
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                            className="p-1 text-gray-500 hover:text-black transition-colors"
+                            className="p-1 text-gray-500 hover:text-pink-950 transition-colors"
                           >
                             <Minus size={12} />
                           </button>
                           <span className="w-8 text-center text-xs font-semibold">{item.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                            className="p-1 text-gray-500 hover:text-black transition-colors"
+                            className="p-1 text-gray-500 hover:text-pink-950 transition-colors"
                           >
                             <Plus size={12} />
                           </button>
@@ -136,7 +136,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Footer Summary */}
             {cart.length > 0 && (
               <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-4">
-                <div className="flex justify-between text-base font-bold text-gray-900">
+                <div className="flex justify-between text-base font-bold text-pink-950">
                   <span>Subtotal</span>
                   <span>₹{cartTotal.toFixed(0)}</span>
                 </div>

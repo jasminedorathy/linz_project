@@ -218,8 +218,8 @@ export default function QuizPage() {
                         onClick={() => handleSelect(opt.value)}
                         className={`p-4 rounded-2xl border-2 text-left font-semibold text-sm transition-all flex items-center gap-3 ${
                           selected === opt.value
-                            ? "border-amber-600 bg-amber-50 scale-98"
-                            : "border-gray-200 bg-gray-50 hover:border-amber-300"
+                            ? "border-pink-600 bg-pink-50 scale-98"
+                            : "border-gray-200 bg-gray-50 hover:border-pink-300"
                         }`}
                       >
                         <span className="text-2xl">{opt.label.split(" ")[0]}</span>

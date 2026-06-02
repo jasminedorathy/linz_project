@@ -92,25 +92,25 @@ export default function ProfilePage() {
             {/* Loyalty card */}
             <div className="bg-white rounded-3xl p-6 shadow-sm space-y-4">
               <div className="flex items-center gap-2.5">
-                <Award size={20} className="text-amber-500" />
+                <Award size={20} className="text-pink-500" />
                 <h4 className="font-bold text-sm text-gray-800 uppercase tracking-wide">
                   Loyalty Points Status
                 </h4>
               </div>
 
-              <div className="text-center py-4 bg-amber-50/50 rounded-2xl border border-amber-100">
-                <p className="text-3xl font-extrabold text-amber-700">{totalPoints}</p>
-                <p className="text-xs text-amber-900 font-semibold mt-1">Sweet Rewards Points</p>
+              <div className="text-center py-4 bg-pink-50/50 rounded-2xl border border-pink-100">
+                <p className="text-3xl font-extrabold text-pink-700">{totalPoints}</p>
+                <p className="text-xs text-pink-900 font-semibold mt-1">Sweet Rewards Points</p>
               </div>
 
               <div className="space-y-1">
                 <div className="flex justify-between text-xs font-semibold">
                   <span className="text-gray-500">Free Pastry Reward</span>
-                  <span className="text-gray-900">{totalPoints}/{cookieGoal} pts</span>
+                  <span className="text-pink-950">{totalPoints}/{cookieGoal} pts</span>
                 </div>
                 <div className="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-amber-500 transition-all duration-500"
+                    className="h-full bg-pink-500 transition-all duration-500"
                     style={{ width: `${progressPercent}%` }}
                   />
                 </div>
@@ -156,7 +156,7 @@ export default function ProfilePage() {
                       <div className="flex justify-between items-center text-xs">
                         <span className="font-bold text-gray-800">{o.orderId}</span>
                         <span className={`px-2 py-0.5 rounded-full font-bold capitalize text-[10px] ${
-                          o.status === "completed" ? "bg-green-100 text-green-700" : "bg-amber-100 text-amber-700"
+                          o.status === "completed" ? "bg-green-100 text-green-700" : "bg-pink-100 text-pink-700"
                         }`}>
                           {o.status || "pending"}
                         </span>

@@ -57,7 +57,7 @@ export default function GroupGiftPage() {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-amber-200 bg-white";
+  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-pink-200 bg-white";
 
   return (
     <>
@@ -87,7 +87,7 @@ export default function GroupGiftPage() {
                       key={cake.id}
                       onClick={() => setSelectedCake(cake)}
                       className={`flex items-center justify-between p-4 rounded-2xl border-2 transition-all text-left ${
-                        selectedCake.id === cake.id ? "border-amber-600 bg-amber-50/30" : "border-gray-200"
+                        selectedCake.id === cake.id ? "border-pink-600 bg-pink-50/30" : "border-gray-200"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -123,11 +123,11 @@ export default function GroupGiftPage() {
               </div>
 
               {/* Summary */}
-              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-3">
-                <IndianRupee size={20} className="text-amber-600 flex-shrink-0" />
+              <div className="bg-pink-50 border border-pink-200 rounded-2xl p-4 flex items-center gap-3">
+                <IndianRupee size={20} className="text-pink-600 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="font-bold text-amber-900">Target Amount: ₹{selectedCake.price}</p>
-                  <p className="text-amber-700 text-xs">Share the link with friends — each person can contribute any amount</p>
+                  <p className="font-bold text-pink-900">Target Amount: ₹{selectedCake.price}</p>
+                  <p className="text-pink-700 text-xs">Share the link with friends — each person can contribute any amount</p>
                 </div>
               </div>
 

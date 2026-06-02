@@ -155,7 +155,7 @@ export default function CustomCakePage() {
             </h1>
             <p className="text-gray-500 text-sm mt-1">
               Your custom design query has been submitted. Reference code:{" "}
-              <span className="font-semibold text-black">{orderId}</span>.
+              <span className="font-semibold text-pink-950">{orderId}</span>.
             </p>
           </div>
 
@@ -202,10 +202,10 @@ export default function CustomCakePage() {
           <div className="lg:col-span-2 bg-white rounded-3xl p-8 shadow-sm relative flex flex-col justify-between min-h-[500px]">
             {/* Step Indicators */}
             <div className="flex items-center justify-between border-b pb-6 mb-8 text-xs font-semibold uppercase tracking-wider text-gray-400">
-              <span className={step === 1 ? "text-amber-600 font-bold" : ""}>1. Shape & Size</span>
-              <span className={step === 2 ? "text-amber-600 font-bold" : ""}>2. Sponge & Frosting</span>
-              <span className={step === 3 ? "text-amber-600 font-bold" : ""}>3. Decorations</span>
-              <span className={step === 4 ? "text-amber-600 font-bold" : ""}>4. Checkout details</span>
+              <span className={step === 1 ? "text-pink-600 font-bold" : ""}>1. Shape & Size</span>
+              <span className={step === 2 ? "text-pink-600 font-bold" : ""}>2. Sponge & Frosting</span>
+              <span className={step === 3 ? "text-pink-600 font-bold" : ""}>3. Decorations</span>
+              <span className={step === 4 ? "text-pink-600 font-bold" : ""}>4. Checkout details</span>
             </div>
 
             {/* Steps Content */}
@@ -232,15 +232,15 @@ export default function CustomCakePage() {
                               type="button"
                               onClick={() => setValue("shape", item.id as any)}
                               className={`p-5 rounded-2xl border-2 text-left relative transition-all ${
-                                watchShape === item.id ? "border-amber-600 bg-amber-50/20" : "border-gray-200"
+                                watchShape === item.id ? "border-pink-600 bg-pink-50/20" : "border-gray-200"
                               }`}
                             >
                               {watchShape === item.id && (
-                                <span className="absolute top-3 right-3 w-5 h-5 bg-amber-600 rounded-full flex items-center justify-center">
+                                <span className="absolute top-3 right-3 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center">
                                   <Check size={12} color="#fff" />
                                 </span>
                               )}
-                              <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
+                              <h4 className="font-bold text-sm text-pink-950">{item.label}</h4>
                               <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
                             </button>
                           ))}
@@ -258,15 +258,15 @@ export default function CustomCakePage() {
                               type="button"
                               onClick={() => setValue("size", item.id as any)}
                               className={`p-5 rounded-2xl border-2 text-left relative transition-all ${
-                                watchSize === item.id ? "border-amber-600 bg-amber-50/20" : "border-gray-200"
+                                watchSize === item.id ? "border-pink-600 bg-pink-50/20" : "border-gray-200"
                               }`}
                             >
                               {watchSize === item.id && (
-                                <span className="absolute top-3 right-3 w-5 h-5 bg-amber-600 rounded-full flex items-center justify-center">
+                                <span className="absolute top-3 right-3 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center">
                                   <Check size={12} color="#fff" />
                                 </span>
                               )}
-                              <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
+                              <h4 className="font-bold text-sm text-pink-950">{item.label}</h4>
                               <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
                               <p className="text-sm font-semibold mt-2" style={{ color: "var(--color-primary)" }}>
                                 Base: ₹{item.basePrice}
@@ -298,18 +298,18 @@ export default function CustomCakePage() {
                               type="button"
                               onClick={() => setValue("flavour", item.id as any)}
                               className={`p-5 rounded-2xl border-2 text-left relative transition-all ${
-                                watchFlavour === item.id ? "border-amber-600 bg-amber-50/20" : "border-gray-200"
+                                watchFlavour === item.id ? "border-pink-600 bg-pink-50/20" : "border-gray-200"
                               }`}
                             >
                               {watchFlavour === item.id && (
-                                <span className="absolute top-3 right-3 w-5 h-5 bg-amber-600 rounded-full flex items-center justify-center">
+                                <span className="absolute top-3 right-3 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center">
                                   <Check size={12} color="#fff" />
                                 </span>
                               )}
-                              <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
+                              <h4 className="font-bold text-sm text-pink-950">{item.label}</h4>
                               <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
                               {item.extraPrice > 0 && (
-                                <p className="text-xs font-semibold mt-2 text-amber-600">
+                                <p className="text-xs font-semibold mt-2 text-pink-600">
                                   +₹{item.extraPrice}
                                 </p>
                               )}
@@ -329,18 +329,18 @@ export default function CustomCakePage() {
                               type="button"
                               onClick={() => setValue("frosting", item.id as any)}
                               className={`p-5 rounded-2xl border-2 text-left relative transition-all ${
-                                watchFrosting === item.id ? "border-amber-600 bg-amber-50/20" : "border-gray-200"
+                                watchFrosting === item.id ? "border-pink-600 bg-pink-50/20" : "border-gray-200"
                               }`}
                             >
                               {watchFrosting === item.id && (
-                                <span className="absolute top-3 right-3 w-5 h-5 bg-amber-600 rounded-full flex items-center justify-center">
+                                <span className="absolute top-3 right-3 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center">
                                   <Check size={12} color="#fff" />
                                 </span>
                               )}
-                              <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
+                              <h4 className="font-bold text-sm text-pink-950">{item.label}</h4>
                               <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
                               {item.extraPrice > 0 && (
-                                <p className="text-xs font-semibold mt-2 text-amber-600">
+                                <p className="text-xs font-semibold mt-2 text-pink-600">
                                   +₹{item.extraPrice}
                                 </p>
                               )}
@@ -382,17 +382,17 @@ export default function CustomCakePage() {
                                   }
                                 }}
                                 className={`p-5 rounded-2xl border-2 text-left relative transition-all ${
-                                  isChecked ? "border-amber-600 bg-amber-50/20" : "border-gray-200"
+                                  isChecked ? "border-pink-600 bg-pink-50/20" : "border-gray-200"
                                 }`}
                               >
                                 {isChecked && (
-                                  <span className="absolute top-3 right-3 w-5 h-5 bg-amber-600 rounded-full flex items-center justify-center">
+                                  <span className="absolute top-3 right-3 w-5 h-5 bg-pink-600 rounded-full flex items-center justify-center">
                                     <Check size={12} color="#fff" />
                                   </span>
                                 )}
-                                <h4 className="font-bold text-sm text-gray-900">{item.label}</h4>
+                                <h4 className="font-bold text-sm text-pink-950">{item.label}</h4>
                                 <p className="text-xs text-gray-500 mt-1 leading-normal">{item.desc}</p>
-                                <p className="text-xs font-semibold mt-2 text-amber-600">+₹{item.price}</p>
+                                <p className="text-xs font-semibold mt-2 text-pink-600">+₹{item.price}</p>
                               </button>
                             );
                           })}
@@ -482,7 +482,7 @@ export default function CustomCakePage() {
                   <button
                     type="button"
                     onClick={prevStep}
-                    className="flex items-center gap-2 font-bold text-sm text-gray-500 hover:text-black transition-colors"
+                    className="flex items-center gap-2 font-bold text-sm text-gray-500 hover:text-pink-950 transition-colors"
                   >
                     <ChevronLeft size={16} /> Back
                   </button>
@@ -575,7 +575,7 @@ export default function CustomCakePage() {
 
                 <div className="border-t pt-4 flex justify-between font-bold text-lg">
                   <span className="flex items-center gap-1.5">
-                    <Sparkles size={16} className="text-amber-500" /> Estimate
+                    <Sparkles size={16} className="text-pink-500" /> Estimate
                   </span>
                   <span style={{ color: "var(--color-primary)" }}>₹{totalPrice.toFixed(0)}</span>
                 </div>

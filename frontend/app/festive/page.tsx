@@ -163,7 +163,7 @@ function FestivalCard({ f, isNext }: { f: Festival; isNext: boolean }) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`rounded-3xl overflow-hidden border-2 transition-all ${isNext ? "border-amber-400 shadow-xl" : "border-gray-100 shadow-sm"}`}
+      className={`rounded-3xl overflow-hidden border-2 transition-all ${isNext ? "border-pink-400 shadow-xl" : "border-gray-100 shadow-sm"}`}
       style={{ backgroundColor: f.bgColour }}
     >
       {isNext && (

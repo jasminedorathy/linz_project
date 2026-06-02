@@ -67,7 +67,7 @@ export default function CommunityPage() {
     setPhotos((prev) => prev.map((p) => p.id === id ? { ...p, likes: p.likes + 1 } : p));
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-amber-200 bg-white";
+  const inputClass = "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-pink-200 bg-white";
 
   return (
     <>
@@ -118,7 +118,7 @@ export default function CommunityPage() {
                       <p className="font-bold text-sm text-gray-800">{photo.name}</p>
                       <div className="flex gap-0.5 mt-0.5">
                         {[...Array(5)].map((_, si) => (
-                          <Star key={si} size={10} className={si < photo.rating ? "text-amber-400 fill-amber-400" : "text-gray-200"} />
+                          <Star key={si} size={10} className={si < photo.rating ? "text-pink-400 fill-pink-400" : "text-gray-200"} />
                         ))}
                       </div>
                     </div>
@@ -141,7 +141,7 @@ export default function CommunityPage() {
         {showUpload && (
           <>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black z-50" onClick={() => setShowUpload(false)} />
+              className="fixed inset-0 bg-pink-950 z-50" onClick={() => setShowUpload(false)} />
             <motion.div initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9 }}
               className="fixed inset-0 z-50 flex items-center justify-center p-6">
@@ -160,7 +160,7 @@ export default function CommunityPage() {
                   <>
                     {/* File drop zone */}
                     <div onClick={() => fileRef.current?.click()}
-                      className="border-2 border-dashed border-gray-200 rounded-2xl p-6 text-center cursor-pointer hover:border-amber-300 hover:bg-amber-50/30 transition-all">
+                      className="border-2 border-dashed border-gray-200 rounded-2xl p-6 text-center cursor-pointer hover:border-pink-300 hover:bg-pink-50/30 transition-all">
                       {preview ? (
                         <div className="relative w-full h-40 rounded-xl overflow-hidden">
                           <Image src={preview} alt="preview" fill className="object-cover" sizes="400px" />
@@ -191,7 +191,7 @@ export default function CommunityPage() {
                       <div className="flex items-center gap-1 px-4 py-2 border border-gray-200 rounded-xl bg-white">
                         {[1, 2, 3, 4, 5].map((r) => (
                           <button key={r} onClick={() => setForm({ ...form, rating: r })}>
-                            <Star size={18} className={r <= form.rating ? "text-amber-400 fill-amber-400" : "text-gray-200"} />
+                            <Star size={18} className={r <= form.rating ? "text-pink-400 fill-pink-400" : "text-gray-200"} />
                           </button>
                         ))}
                       </div>

@@ -118,7 +118,7 @@ export default function CheckoutPage() {
           ...(data.paymentMethod === "upi" && { vpa: data.upiId }),
           method: data.paymentMethod === "upi" ? "upi" : "card",
         },
-        theme: { color: "#C3925F" },
+        theme: { color: "#EC4899" },
         handler: async (response: any) => {
           // 3. Verify payment on our backend
           const verifyRes = await fetch("http://localhost:5000/api/payment/verify", {
@@ -188,7 +188,7 @@ export default function CheckoutPage() {
           <div>
             <h1 className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>Order Placed!</h1>
             <p className="text-gray-500 text-sm mt-1">
-              Order <span className="font-semibold text-black">{createdOrder.orderId}</span> confirmed · Payment ID: <span className="font-mono text-xs">{createdOrder.paymentId}</span>
+              Order <span className="font-semibold text-pink-950">{createdOrder.orderId}</span> confirmed · Payment ID: <span className="font-mono text-xs">{createdOrder.paymentId}</span>
             </p>
           </div>
 
@@ -270,7 +270,7 @@ export default function CheckoutPage() {
                     <button
                       key={id} type="button"
                       onClick={() => { setOrderType(id as any); setValue("orderType", id as any); }}
-                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all ${orderType === id ? "border-amber-600 bg-amber-50/30" : "border-gray-200 bg-white"}`}
+                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all ${orderType === id ? "border-pink-600 bg-pink-50/30" : "border-gray-200 bg-white"}`}
                     >
                       <Icon size={24} style={{ color: orderType === id ? "var(--color-primary)" : "#6b7280" }} />
                       <span className="text-sm font-semibold">{label}</span>
@@ -349,7 +349,7 @@ export default function CheckoutPage() {
                     <button
                       key={id} type="button"
                       onClick={() => { setPaymentMethod(id as any); setValue("paymentMethod", id as any); }}
-                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all text-center ${paymentMethod === id ? "border-amber-600 bg-amber-50/30" : "border-gray-200 bg-white"}`}
+                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all text-center ${paymentMethod === id ? "border-pink-600 bg-pink-50/30" : "border-gray-200 bg-white"}`}
                     >
                       <Icon size={22} style={{ color: paymentMethod === id ? "var(--color-primary)" : "#6b7280" }} />
                       <span className="text-sm font-bold">{label}</span>
@@ -445,20 +445,20 @@ export default function CheckoutPage() {
               <div className="border-t pt-4 space-y-3 text-sm">
                 <div className="flex justify-between text-gray-500">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-black">₹{cartTotal.toFixed(0)}</span>
+                  <span className="font-semibold text-pink-950">₹{cartTotal.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between text-gray-500">
                   <span>GST (18%)</span>
-                  <span className="font-semibold text-black">₹{gst.toFixed(0)}</span>
+                  <span className="font-semibold text-pink-950">₹{gst.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between text-gray-500">
                   <span>Order Type</span>
-                  <span className="font-semibold text-black capitalize">{orderType}</span>
+                  <span className="font-semibold text-pink-950 capitalize">{orderType}</span>
                 </div>
                 {orderType === "delivery" && (
                   <div className="flex justify-between text-gray-500">
                     <span>Delivery Fee</span>
-                    <span className="font-semibold text-black">₹{DELIVERY_FEE}</span>
+                    <span className="font-semibold text-pink-950">₹{DELIVERY_FEE}</span>
                   </div>
                 )}
                 <div className="border-t pt-3 flex justify-between font-bold text-base">

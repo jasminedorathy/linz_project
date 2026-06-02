@@ -112,7 +112,7 @@ export default function AdminDashboard() {
         style={{ background: "linear-gradient(135deg,#1a1008 0%,#3a1e08 100%)" }}
       >
         <span
-          className="block text-sm font-semibold uppercase tracking-widest text-amber-500 mb-2"
+          className="block text-sm font-semibold uppercase tracking-widest text-pink-500 mb-2"
         >
           Bakery Administration Portal
         </span>
@@ -133,7 +133,7 @@ export default function AdminDashboard() {
               <button
                 onClick={() => setActiveTab("orders")}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "orders" ? "bg-amber-600 text-white" : "text-gray-500 hover:bg-gray-50"
+                  activeTab === "orders" ? "bg-pink-600 text-white" : "text-gray-500 hover:bg-gray-50"
                 }`}
               >
                 <ShoppingCart size={18} />
@@ -146,7 +146,7 @@ export default function AdminDashboard() {
               <button
                 onClick={() => setActiveTab("bookings")}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "bookings" ? "bg-amber-600 text-white" : "text-gray-500 hover:bg-gray-50"
+                  activeTab === "bookings" ? "bg-pink-600 text-white" : "text-gray-500 hover:bg-gray-50"
                 }`}
               >
                 <Calendar size={18} />
@@ -159,7 +159,7 @@ export default function AdminDashboard() {
               <button
                 onClick={() => setActiveTab("menu")}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "menu" ? "bg-amber-600 text-white" : "text-gray-500 hover:bg-gray-50"
+                  activeTab === "menu" ? "bg-pink-600 text-white" : "text-gray-500 hover:bg-gray-50"
                 }`}
               >
                 <Database size={18} />
@@ -169,7 +169,7 @@ export default function AdminDashboard() {
               <button
                 onClick={() => setActiveTab("messages")}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === "messages" ? "bg-amber-600 text-white" : "text-gray-500 hover:bg-gray-50"
+                  activeTab === "messages" ? "bg-pink-600 text-white" : "text-gray-500 hover:bg-gray-50"
                 }`}
               >
                 <Mail size={18} />
@@ -220,7 +220,7 @@ export default function AdminDashboard() {
                           </td>
                           <td className="py-4 capitalize">
                             {o.type === "custom_cake" ? (
-                              <span className="text-amber-700 bg-amber-50 px-2 py-1 rounded-full text-xs font-semibold">
+                              <span className="text-pink-700 bg-pink-50 px-2 py-1 rounded-full text-xs font-semibold">
                                 Custom Cake
                               </span>
                             ) : (
@@ -236,7 +236,7 @@ export default function AdminDashboard() {
                             <span className={`px-2.5 py-1 rounded-full text-xs font-bold ${
                               o.status === "completed" 
                                 ? "bg-green-100 text-green-700" 
-                                : "bg-amber-100 text-amber-700"
+                                : "bg-pink-100 text-pink-700"
                             }`}>
                               {o.status || "pending"}
                             </span>
@@ -244,7 +244,7 @@ export default function AdminDashboard() {
                           <td className="py-4">
                             <button
                               onClick={() => setSelectedOrder(o)}
-                              className="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-all"
+                              className="p-2 text-gray-500 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition-all"
                             >
                               <Eye size={18} />
                             </button>
@@ -269,7 +269,7 @@ export default function AdminDashboard() {
                     <div key={b.bookingId} className="border border-gray-100 rounded-2xl p-5 bg-gray-50/50 space-y-4">
                       <div className="flex justify-between items-start">
                         <div>
-                          <span className="text-[10px] font-bold tracking-widest uppercase text-amber-600 bg-amber-50 px-2 py-1 rounded-md">
+                          <span className="text-[10px] font-bold tracking-widest uppercase text-pink-600 bg-pink-50 px-2 py-1 rounded-md">
                             {b.bookingId}
                           </span>
                           <h4 className="font-bold text-gray-800 text-base mt-2">{b.typeLabel}</h4>
@@ -341,7 +341,7 @@ export default function AdminDashboard() {
                           <h4 className="font-bold text-sm text-gray-800">{m.name}</h4>
                           <p className="text-xs text-gray-400">{m.email}</p>
                         </div>
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">
                           {m.subject}
                         </span>
                       </div>
@@ -360,7 +360,7 @@ export default function AdminDashboard() {
 
       {/* View Order Modal */}
       {selectedOrder && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
+        <div className="fixed inset-0 bg-pink-950/50 z-50 flex items-center justify-center p-6">
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 space-y-6 shadow-2xl relative">
             <h4 className="text-xl font-bold border-b pb-3" style={{ fontFamily: "var(--font-heading)" }}>
               Details for {selectedOrder.orderId}
@@ -418,7 +418,7 @@ export default function AdminDashboard() {
               </div>
               <button
                 onClick={() => setSelectedOrder(null)}
-                className="py-2 px-4 rounded-xl text-xs font-bold text-gray-400 hover:text-black transition-colors"
+                className="py-2 px-4 rounded-xl text-xs font-bold text-gray-400 hover:text-pink-950 transition-colors"
               >
                 Close
               </button>

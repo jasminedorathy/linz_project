@@ -79,12 +79,12 @@ export default function GalleryPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-pink-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
                     <ZoomIn size={24} color="#fff" />
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-pink-950/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-sm font-medium">{img.caption}</p>
                 </div>
               </motion.div>
