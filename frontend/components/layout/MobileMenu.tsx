@@ -56,7 +56,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
                 className="text-3xl"
                 style={{ fontFamily: "var(--font-script)", color: "var(--color-primary)" }}
               >
-                Bellaria
+                Linz Baking
               </span>
               <button
                 onClick={onClose}

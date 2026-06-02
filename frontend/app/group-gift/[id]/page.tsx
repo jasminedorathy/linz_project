@@ -15,7 +15,7 @@ export default function GroupGiftContributePage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    const gifts = JSON.parse(localStorage.getItem("bellaria_gifts") || "[]");
+    const gifts = JSON.parse(localStorage.getItem("linz_baking_gifts") || "[]");
     const found = gifts.find((g: any) => g.id === giftId);
     setGift(found || null);
   }, [giftId]);
@@ -33,7 +33,7 @@ export default function GroupGiftContributePage() {
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
 
-    const gifts = JSON.parse(localStorage.getItem("bellaria_gifts") || "[]");
+    const gifts = JSON.parse(localStorage.getItem("linz_baking_gifts") || "[]");
     const updated = gifts.map((g: any) => {
       if (g.id === giftId) {
         const newCollected = Math.min(g.collected + parseFloat(form.amount), g.target);

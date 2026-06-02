@@ -13,10 +13,10 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/menu", label: "Menu" },
-  { href: "/quiz", label: "🎂 Cake Quiz" },
-  { href: "/festive", label: "🪔 Festive" },
-  { href: "/community", label: "📸 Community" },
-  { href: "/group-gift", label: "🎁 Group Gift" },
+  { href: "/quiz", label: "Cake Quiz" },
+  { href: "/festive", label: "Festive" },
+  { href: "/community", label: "Community" },
+  { href: "/group-gift", label: "Group Gift" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -34,7 +34,7 @@ export default function Header() {
 
     // Sync auth state
     const syncUser = () => {
-      const u = localStorage.getItem("bellaria_current_user");
+      const u = localStorage.getItem("linz_baking_current_user");
       setCurrentUser(u ? JSON.parse(u) : null);
     };
     syncUser();
@@ -54,13 +54,13 @@ export default function Header() {
         style={{ backgroundColor: "var(--color-primary)", color: "#fff" }}
       >
         <div className="flex items-center gap-6">
-          <a href="tel:+919876543210" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="tel:+[PHONE_NUMBER]" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Phone size={12} />
-            +91 98765 43210
+            +91 [PHONE_NUMBER]
           </a>
-          <a href="mailto:hello@bellaria.in" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Mail size={12} />
-            hello@bellaria.in
+            [EMAIL_ADDRESS]
           </a>
         </div>
         <div className="flex items-center gap-4">
@@ -79,18 +79,16 @@ export default function Header() {
         transition={{ duration: 0.3 }}
         className="sticky top-0 z-30 w-full"
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-3 py-4">
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none group">
             <span
               className="text-4xl leading-none"
               style={{ fontFamily: "var(--font-script)", color: "var(--color-primary)" }}
             >
-              Bellaria
+              Linz Baking
             </span>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-gray-400 mt-0.5">
-              Cakes & Bakery
-            </span>
+
           </Link>
 
           {/* Desktop Nav */}

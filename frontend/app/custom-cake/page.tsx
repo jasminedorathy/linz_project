@@ -15,7 +15,7 @@ const cakeSchema = z.object({
   size: z.enum(["6inch", "8inch", "10inch", "2tier"]),
   flavour: z.enum(["vanilla", "chocolate", "redvelvet", "lemon", "caramel"]),
   frosting: z.enum(["buttercream_smooth", "buttercream_rustic", "fondant"]),
-  decorations: z.array(z.string()).default([]),
+  decorations: z.array(z.string()),
   writing: z.string().max(40, "Writing must be under 40 characters").optional(),
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
@@ -128,8 +128,8 @@ export default function CustomCakePage() {
     };
 
     // Store order mock database
-    const existingOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
-    localStorage.setItem("bellaria_orders", JSON.stringify([customCakeOrder, ...existingOrders]));
+    const existingOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
+    localStorage.setItem("linz_baking_orders", JSON.stringify([customCakeOrder, ...existingOrders]));
 
     setOrderId(randomId);
     setSubmitSuccess(true);

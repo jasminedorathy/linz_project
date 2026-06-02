@@ -16,9 +16,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
-  if (!post) return { title: "Post Not Found | Bellaria" };
+  if (!post) return { title: "Post Not Found | Linz Baking" };
   return {
-    title: `${post.title} | Bellaria Blog`,
+    title: `${post.title} | Linz Baking Blog`,
     description: post.excerpt,
   };
 }

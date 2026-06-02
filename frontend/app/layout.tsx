@@ -24,7 +24,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Bellaria Cakes & Bakery",
+  title: "Linz Baking Cakes & Bakery",
   description:
     "Handcrafted cakes, pastries and breads made with love. Order custom cakes for any occasion.",
 };

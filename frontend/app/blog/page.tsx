@@ -4,8 +4,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { blogPosts } from "@/lib/data/blogData";
 
 export const metadata: Metadata = {
-  title: "Blog | Bellaria Cakes & Bakery",
-  description: "Baking tips, seasonal recipes, and behind-the-scenes stories from the Bellaria kitchen.",
+  title: "Blog | Linz Baking Cakes & Bakery",
+  description: "Baking tips, seasonal recipes, and behind-the-scenes stories from the Linz Baking kitchen.",
 };
 
 export default function BlogPage() {
@@ -35,7 +35,7 @@ export default function BlogPage() {
           <div className="flex justify-center">
             <SectionHeading
               subtitle="Stories & Recipes"
-              title="Latest from Bellaria"
+              title="Latest from Linz Baking"
               description="Discover tips, behind-the-scenes moments, and seasonal recipes from our master bakers."
               align="center"
             />

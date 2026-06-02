@@ -90,7 +90,7 @@ export default function CheckoutPage() {
     setIsSubmitting(true);
     try {
       // 1. Create a Razorpay order on our backend
-      const orderRes = await fetch("http://localhost:5000/api/payment/create-order", {
+      const orderRes = await fetch("/api/payment/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: amountPaise, currency: "INR", receipt: `bel_${Date.now()}` }),
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_XXXXXXXXXXXXXXXX",
         amount: orderData.amount,
         currency: orderData.currency,
-        name: "Bellaria Cakes & Bakery",
+        name: "Linz Baking Cakes & Bakery",
         description: "Fresh Baked Goods Order",
         order_id: orderData.orderId,
         prefill: {
@@ -121,7 +121,7 @@ export default function CheckoutPage() {
         theme: { color: "#EC4899" },
         handler: async (response: any) => {
           // 3. Verify payment on our backend
-          const verifyRes = await fetch("http://localhost:5000/api/payment/verify", {
+          const verifyRes = await fetch("/api/payment/verify", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -146,8 +146,8 @@ export default function CheckoutPage() {
               paymentMethod: data.paymentMethod,
               status: "paid",
             };
-            const existingOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
-            localStorage.setItem("bellaria_orders", JSON.stringify([orderResult, ...existingOrders]));
+            const existingOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
+            localStorage.setItem("linz_baking_orders", JSON.stringify([orderResult, ...existingOrders]));
             setCreatedOrder(orderResult);
             setOrderSuccess(true);
             clearCart();
