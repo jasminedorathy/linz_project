@@ -5,8 +5,8 @@ import StatsSection from "@/components/sections/StatsSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "About Us | Bellaria Cakes & Bakery",
-  description: "Learn the story behind Bellaria — our passion, our team, and our commitment to handcrafted excellence.",
+  title: "About Us | Linz Baking Cakes & Bakery",
+  description: "Learn the story behind Linz Baking — our passion, our team, and our commitment to handcrafted excellence.",
 };
 
 const team = [
@@ -33,7 +33,7 @@ export default function AboutPage() {
           className="text-4xl md:text-5xl font-bold text-white"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          About Bellaria
+          About Linz Baking
         </h1>
       </section>
 

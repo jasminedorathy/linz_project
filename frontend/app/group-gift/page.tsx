@@ -43,8 +43,8 @@ export default function GroupGiftPage() {
       contributors: [] as any[],
       createdAt: new Date().toLocaleDateString("en-IN"),
     };
-    const existing = JSON.parse(localStorage.getItem("bellaria_gifts") || "[]");
-    localStorage.setItem("bellaria_gifts", JSON.stringify([giftData, ...existing]));
+    const existing = JSON.parse(localStorage.getItem("linz_baking_gifts") || "[]");
+    localStorage.setItem("linz_baking_gifts", JSON.stringify([giftData, ...existing]));
     setGiftId(id);
     setStep("share");
   };

@@ -142,9 +142,9 @@ app.post("/api/payment/verify", (req, res) => {
 
 // ─── Health Check ──────────────────────────────────────────────────────────────
 app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", message: "Bellaria Backend is running 🍰" });
+  res.json({ status: "ok", message: "Linz Baking Backend is running 🍰" });
 });
 
 app.listen(PORT, () => {
-  console.log(`🍰 Bellaria Backend running on port ${PORT}`);
+  console.log(`🍰 Linz Baking Backend running on port ${PORT}`);
 });

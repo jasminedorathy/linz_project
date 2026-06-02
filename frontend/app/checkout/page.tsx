@@ -108,7 +108,7 @@ export default function CheckoutPage() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_XXXXXXXXXXXXXXXX",
         amount: orderData.amount,
         currency: orderData.currency,
-        name: "Bellaria Cakes & Bakery",
+        name: "Linz Baking Cakes & Bakery",
         description: "Fresh Baked Goods Order",
         order_id: orderData.orderId,
         prefill: {
@@ -146,8 +146,8 @@ export default function CheckoutPage() {
               paymentMethod: data.paymentMethod,
               status: "paid",
             };
-            const existingOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
-            localStorage.setItem("bellaria_orders", JSON.stringify([orderResult, ...existingOrders]));
+            const existingOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
+            localStorage.setItem("linz_baking_orders", JSON.stringify([orderResult, ...existingOrders]));
             setCreatedOrder(orderResult);
             setOrderSuccess(true);
             clearCart();

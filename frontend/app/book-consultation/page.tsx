@@ -33,7 +33,7 @@ export default function ConsultationBookingPage() {
   const [bookingDetails, setBookingDetails] = useState<any>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<BookingForm>({
+  const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<BookingForm>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
       consultationType: "wedding",
@@ -61,8 +61,8 @@ export default function ConsultationBookingPage() {
     };
 
     // Save bookings in localStorage
-    const existing = JSON.parse(localStorage.getItem("bellaria_bookings") || "[]");
-    localStorage.setItem("bellaria_bookings", JSON.stringify([booking, ...existing]));
+    const existing = JSON.parse(localStorage.getItem("linz_baking_bookings") || "[]");
+    localStorage.setItem("linz_baking_bookings", JSON.stringify([booking, ...existing]));
 
     setBookingDetails(booking);
     setIsSubmitting(false);

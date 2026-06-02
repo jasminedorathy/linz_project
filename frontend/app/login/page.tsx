@@ -38,18 +38,18 @@ export default function LoginPage() {
   const onLogin = async (data: LoginForm) => {
     setErrorMsg("");
     // Look up user in localStorage
-    const users = JSON.parse(localStorage.getItem("bellaria_users") || "[]");
+    const users = JSON.parse(localStorage.getItem("linz_baking_users") || "[]");
     const user = users.find((u: any) => u.email === data.email);
 
     if (user && user.password === data.password) {
-      localStorage.setItem("bellaria_current_user", JSON.stringify(user));
+      localStorage.setItem("linz_baking_current_user", JSON.stringify(user));
       router.push("/profile");
       // Force header update
       window.dispatchEvent(new Event("storage"));
-    } else if (data.email === "admin@bellaria.com" && data.password === "admin123") {
+    } else if (data.email === "admin@linzbaking.com" && data.password === "admin123") {
       // Direct Admin shortcut
-      const adminUser = { name: "Admin Manager", email: "admin@bellaria.com", isAdmin: true };
-      localStorage.setItem("bellaria_current_user", JSON.stringify(adminUser));
+      const adminUser = { name: "Admin Manager", email: "admin@linzbaking.com", isAdmin: true };
+      localStorage.setItem("linz_baking_current_user", JSON.stringify(adminUser));
       router.push("/admin");
     } else {
       setErrorMsg("Invalid email or password.");
@@ -58,7 +58,7 @@ export default function LoginPage() {
 
   const onSignup = async (data: SignupForm) => {
     setErrorMsg("");
-    const users = JSON.parse(localStorage.getItem("bellaria_users") || "[]");
+    const users = JSON.parse(localStorage.getItem("linz_baking_users") || "[]");
     const exists = users.some((u: any) => u.email === data.email);
 
     if (exists) {
@@ -74,8 +74,8 @@ export default function LoginPage() {
       createdAt: new Date().toLocaleDateString(),
     };
 
-    localStorage.setItem("bellaria_users", JSON.stringify([...users, newUser]));
-    localStorage.setItem("bellaria_current_user", JSON.stringify(newUser));
+    localStorage.setItem("linz_baking_users", JSON.stringify([...users, newUser]));
+    localStorage.setItem("linz_baking_current_user", JSON.stringify(newUser));
     router.push("/profile");
     // Force header update
     window.dispatchEvent(new Event("storage"));
@@ -94,7 +94,7 @@ export default function LoginPage() {
           className="text-4xl md:text-5xl font-bold text-white"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          {isLogin ? "Welcome Back" : "Join Bellaria Family"}
+          {isLogin ? "Welcome Back" : "Join Linz Baking Family"}
         </h1>
       </section>
 
@@ -150,7 +150,7 @@ export default function LoginPage() {
               </div>
 
               <div className="text-right text-xs">
-                <span className="text-gray-400 italic">Demo admin login: admin@bellaria.com / admin123</span>
+                <span className="text-gray-400 italic">Demo admin login: admin@linzbaking.com / admin123</span>
               </div>
 
               <motion.button

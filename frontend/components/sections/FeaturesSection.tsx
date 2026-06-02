@@ -44,7 +44,7 @@ export default function FeaturesSection() {
         <div className="flex justify-center">
           <SectionHeading
             subtitle="Why Choose Us"
-            title="What Makes Bellaria Special"
+            title="What Makes Linz Baking Special"
             description="More than a bakery — we're a place where every bite tells a story and every cake is a memory waiting to happen."
             align="center"
           />

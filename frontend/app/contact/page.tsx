@@ -20,7 +20,7 @@ type FormData = z.infer<typeof schema>;
 const contactInfo = [
   { icon: MapPin, label: "Address",   value: "42, Anna Salai, Nungambakkam, Chennai – 600 006, Tamil Nadu" },
   { icon: Phone,  label: "Phone",     value: "+91 98765 43210" },
-  { icon: Mail,   label: "Email",     value: "hello@bellaria.in" },
+  { icon: Mail,   label: "Email",     value: "hello@linzbaking.in" },
   { icon: Clock,  label: "Hours",     value: "Mon–Sat 8AM–9PM · Sun 9AM–6PM" },
 ];
 

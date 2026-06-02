@@ -18,7 +18,7 @@ interface Photo {
 
 const SEED_PHOTOS: Photo[] = [
   { id: "s1", dataUrl: "/images/cake-1.png", name: "Aarav M.", caption: "Perfect for my son's birthday! The chocolate layers were divine 😍", occasion: "Birthday", rating: 5, likes: 24, createdAt: "12 May 2026" },
-  { id: "s2", dataUrl: "/images/cake-2.png", name: "Sneha R.", caption: "Our wedding cake was everything we dreamed of. Bellaria made it magical.", occasion: "Wedding", rating: 5, likes: 41, createdAt: "02 Apr 2026" },
+  { id: "s2", dataUrl: "/images/cake-2.png", name: "Sneha R.", caption: "Our wedding cake was everything we dreamed of. Linz Baking made it magical.", occasion: "Wedding", rating: 5, likes: 41, createdAt: "02 Apr 2026" },
   { id: "s3", dataUrl: "/images/pastry-1.png", name: "Karthik S.", caption: "The almond croissants are absolutely flaky and perfect every single time!", occasion: "Daily Treat", rating: 4, likes: 17, createdAt: "28 Mar 2026" },
 ];
 
@@ -31,7 +31,7 @@ export default function CommunityPage() {
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem("bellaria_community") || "[]");
+    const stored = JSON.parse(localStorage.getItem("linz_baking_community") || "[]");
     if (stored.length) setPhotos([...stored, ...SEED_PHOTOS]);
   }, []);
 
@@ -57,7 +57,7 @@ export default function CommunityPage() {
     };
     const updated = [newPhoto, ...photos];
     const userPhotos = updated.filter((p) => p.id.startsWith("u"));
-    localStorage.setItem("bellaria_community", JSON.stringify(userPhotos));
+    localStorage.setItem("linz_baking_community", JSON.stringify(userPhotos));
     setPhotos(updated);
     setSubmitted(true);
     setTimeout(() => { setShowUpload(false); setSubmitted(false); setPreview(null); setForm({ name: "", caption: "", occasion: "Birthday", rating: 5 }); }, 2000);
@@ -87,7 +87,7 @@ export default function CommunityPage() {
           {/* Upload CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
             <div>
-              <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>Share Your Bellaria Moment</h2>
+              <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>Share Your Linz Baking Moment</h2>
               <p className="text-sm text-gray-400 mt-0.5">Show the world your beautiful cake! 🎂</p>
             </div>
             <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}

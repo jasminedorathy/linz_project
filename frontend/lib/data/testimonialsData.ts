@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     role: "Food Blogger",
     avatar: "/images/avatar-2.png",
     rating: 5,
-    review: "Bellaria has the best pastries in town. The almond croissants are a must-try for anyone visiting.",
+    review: "Linz Baking has the best pastries in town. The almond croissants are a must-try for anyone visiting.",
   },
   {
     id: "3",

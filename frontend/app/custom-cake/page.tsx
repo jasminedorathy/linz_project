@@ -128,8 +128,8 @@ export default function CustomCakePage() {
     };
 
     // Store order mock database
-    const existingOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
-    localStorage.setItem("bellaria_orders", JSON.stringify([customCakeOrder, ...existingOrders]));
+    const existingOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
+    localStorage.setItem("linz_baking_orders", JSON.stringify([customCakeOrder, ...existingOrders]));
 
     setOrderId(randomId);
     setSubmitSuccess(true);

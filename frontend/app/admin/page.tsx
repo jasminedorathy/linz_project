@@ -16,8 +16,8 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     // Load local storage states or insert mock fallbacks if empty
-    const savedOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
-    const savedBookings = JSON.parse(localStorage.getItem("bellaria_bookings") || "[]");
+    const savedOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
+    const savedBookings = JSON.parse(localStorage.getItem("linz_baking_bookings") || "[]");
     
     // Mock orders if empty
     if (savedOrders.length === 0) {
@@ -53,7 +53,7 @@ export default function AdminDashboard() {
           date: "2026-05-26"
         }
       ];
-      localStorage.setItem("bellaria_orders", JSON.stringify(mockOrders));
+      localStorage.setItem("linz_baking_orders", JSON.stringify(mockOrders));
       setOrders(mockOrders);
     } else {
       setOrders(savedOrders);
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
           notes: "Looking for an elegant pastel color scheme."
         }
       ];
-      localStorage.setItem("bellaria_bookings", JSON.stringify(mockBookings));
+      localStorage.setItem("linz_baking_bookings", JSON.stringify(mockBookings));
       setBookings(mockBookings);
     } else {
       setBookings(savedBookings);
@@ -93,15 +93,15 @@ export default function AdminDashboard() {
   const updateOrderStatus = (orderId: string, status: string) => {
     const updated = orders.map((o) => (o.orderId === orderId ? { ...o, status } : o));
     setOrders(updated);
-    localStorage.setItem("bellaria_orders", JSON.stringify(updated));
+    localStorage.setItem("linz_baking_orders", JSON.stringify(updated));
     if (selectedOrder && selectedOrder.orderId === orderId) {
       setSelectedOrder({ ...selectedOrder, status });
     }
   };
 
   const handleClearAll = () => {
-    localStorage.removeItem("bellaria_orders");
-    localStorage.removeItem("bellaria_bookings");
+    localStorage.removeItem("linz_baking_orders");
+    localStorage.removeItem("linz_baking_bookings");
     window.location.reload();
   };
 

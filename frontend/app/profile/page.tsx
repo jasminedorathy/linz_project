@@ -14,7 +14,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     const checkUser = () => {
-      const currentUser = JSON.parse(localStorage.getItem("bellaria_current_user") || "null");
+      const currentUser = JSON.parse(localStorage.getItem("linz_baking_current_user") || "null");
       if (!currentUser) {
         router.push("/login");
         return;
@@ -22,12 +22,12 @@ export default function ProfilePage() {
       setUser(currentUser);
 
       // Load user's orders
-      const allOrders = JSON.parse(localStorage.getItem("bellaria_orders") || "[]");
+      const allOrders = JSON.parse(localStorage.getItem("linz_baking_orders") || "[]");
       const userOrders = allOrders.filter((o: any) => o.customer.email === currentUser.email);
       setOrders(userOrders);
 
       // Load user's bookings
-      const allBookings = JSON.parse(localStorage.getItem("bellaria_bookings") || "[]");
+      const allBookings = JSON.parse(localStorage.getItem("linz_baking_bookings") || "[]");
       const userBookings = allBookings.filter((b: any) => b.customer.email === currentUser.email);
       setBookings(userBookings);
     };
@@ -36,7 +36,7 @@ export default function ProfilePage() {
   }, [router]);
 
   const handleLogout = () => {
-    localStorage.removeItem("bellaria_current_user");
+    localStorage.removeItem("linz_baking_current_user");
     router.push("/login");
     // Force header update
     window.dispatchEvent(new Event("storage"));

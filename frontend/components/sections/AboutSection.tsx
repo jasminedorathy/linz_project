@@ -67,7 +67,7 @@ export default function AboutSection() {
           />
 
           <p className="text-gray-600 leading-relaxed">
-            Bellaria was born in a small home kitchen in 2010, driven by a simple belief: that every occasion deserves a truly exceptional cake. Today, our boutique bakery serves hundreds of happy families, couples, and businesses with the same warmth and dedication.
+            Linz Baking was born in a small home kitchen in 2010, driven by a simple belief: that every occasion deserves a truly exceptional cake. Today, our boutique bakery serves hundreds of happy families, couples, and businesses with the same warmth and dedication.
           </p>
           <p className="text-gray-600 leading-relaxed">
             We source the finest local ingredients, collaborate closely with our clients, and pour our hearts into every creation — from a simple birthday cupcake to a 7-tier wedding masterpiece.

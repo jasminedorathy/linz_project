@@ -41,7 +41,7 @@ export default function Footer() {
               className="text-4xl block leading-none"
               style={{ fontFamily: "var(--font-script)", color: "var(--color-primary)" }}
             >
-              Bellaria
+              Linz Baking
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-white/40 mt-1 block">
               Cakes & Bakery
@@ -133,8 +133,8 @@ export default function Footer() {
             </li>
             <li className="flex gap-3 text-sm">
               <Mail size={16} className="flex-shrink-0" style={{ color: "var(--color-primary)" }} />
-              <a href="mailto:hello@bellaria.in" className="hover:text-[var(--color-primary)] transition-colors">
-                hello@bellaria.in
+              <a href="mailto:hello@linzbaking.in" className="hover:text-[var(--color-primary)] transition-colors">
+                hello@linzbaking.in
               </a>
             </li>
             <li className="flex gap-3 text-sm">
@@ -148,7 +148,7 @@ export default function Footer() {
       {/* Copyright bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <p>&copy; {year} Bellaria Cakes & Bakery. All rights reserved.</p>
+          <p>&copy; {year} Linz Baking Cakes & Bakery. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white/70 transition-colors">Terms of Service</Link>

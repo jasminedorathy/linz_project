@@ -39,7 +39,7 @@ export default function HeroSection() {
           className="block text-5xl mb-4"
           style={{ fontFamily: "var(--font-script)", color: "var(--color-primary)" }}
         >
-          Welcome to Bellaria
+          Welcome to Linz Baking
         </motion.span>
 
         {/* Main headline */}
