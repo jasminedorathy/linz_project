@@ -90,7 +90,7 @@ export default function CheckoutPage() {
     setIsSubmitting(true);
     try {
       // 1. Create a Razorpay order on our backend
-      const orderRes = await fetch("http://localhost:5000/api/payment/create-order", {
+      const orderRes = await fetch("/api/payment/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: amountPaise, currency: "INR", receipt: `bel_${Date.now()}` }),
@@ -121,7 +121,7 @@ export default function CheckoutPage() {
         theme: { color: "#C3925F" },
         handler: async (response: any) => {
           // 3. Verify payment on our backend
-          const verifyRes = await fetch("http://localhost:5000/api/payment/verify", {
+          const verifyRes = await fetch("/api/payment/verify", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

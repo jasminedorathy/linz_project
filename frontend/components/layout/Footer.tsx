@@ -123,18 +123,18 @@ export default function Footer() {
           <ul className="flex flex-col gap-4">
             <li className="flex gap-3 text-sm">
               <MapPin size={16} className="flex-shrink-0 mt-0.5" style={{ color: "var(--color-primary)" }} />
-              <span>42, Anna Salai, Nungambakkam, Chennai – 600 006, Tamil Nadu</span>
+              <span>[ADDRESS]</span>
             </li>
             <li className="flex gap-3 text-sm">
               <Phone size={16} className="flex-shrink-0" style={{ color: "var(--color-primary)" }} />
-              <a href="tel:+919876543210" className="hover:text-[var(--color-primary)] transition-colors">
-                +91 98765 43210
+              <a href="tel:[PHONE_NUMBER]" className="hover:text-[var(--color-primary)] transition-colors">
+                [PHONE_NUMBER]
               </a>
             </li>
             <li className="flex gap-3 text-sm">
               <Mail size={16} className="flex-shrink-0" style={{ color: "var(--color-primary)" }} />
-              <a href="mailto:hello@linzbaking.in" className="hover:text-[var(--color-primary)] transition-colors">
-                hello@linzbaking.in
+              <a href="mailto:[EMAIL_ADDRESS]" className="hover:text-[var(--color-primary)] transition-colors">
+                [EMAIL_ADDRESS]
               </a>
             </li>
             <li className="flex gap-3 text-sm">

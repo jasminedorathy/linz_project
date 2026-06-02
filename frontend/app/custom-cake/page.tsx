@@ -15,7 +15,7 @@ const cakeSchema = z.object({
   size: z.enum(["6inch", "8inch", "10inch", "2tier"]),
   flavour: z.enum(["vanilla", "chocolate", "redvelvet", "lemon", "caramel"]),
   frosting: z.enum(["buttercream_smooth", "buttercream_rustic", "fondant"]),
-  decorations: z.array(z.string()).default([]),
+  decorations: z.array(z.string()),
   writing: z.string().max(40, "Writing must be under 40 characters").optional(),
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
