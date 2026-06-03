@@ -160,7 +160,7 @@ export default function CommunityPage() {
                   <>
                     {/* File drop zone */}
                     <div onClick={() => fileRef.current?.click()}
-                      className="border-2 border-dashed border-gray-200 rounded-2xl p-6 text-center cursor-pointer hover:border-pink-300 hover:bg-pink-50/30 transition-all">
+                      className="border-2 border-dashed border-gray-200 rounded-2xl p-6 text-center cursor-pointer hover:border-fuchsia-300 hover:bg-rose-100/30 transition-all">
                       {preview ? (
                         <div className="relative w-full h-40 rounded-xl overflow-hidden">
                           <Image src={preview} alt="preview" fill className="object-cover" sizes="400px" />

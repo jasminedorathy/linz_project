@@ -88,7 +88,7 @@ export default function GroupGiftContributePage() {
               {gift.message && <p className="text-sm text-gray-500 italic mt-2">"{gift.message}"</p>}
             </div>
 
-            <div className="bg-pink-50 rounded-2xl p-4 flex items-center gap-3">
+            <div className="bg-rose-100 rounded-2xl p-4 flex items-center gap-3">
               <span className="text-3xl">{gift.cake.emoji}</span>
               <div>
                 <p className="font-bold text-sm text-gray-800">{gift.cake.name}</p>
@@ -149,7 +149,7 @@ export default function GroupGiftContributePage() {
               <div className="flex gap-2 flex-wrap">
                 {[100, 200, 500].map((amt) => (
                   <button key={amt} onClick={() => setForm({ ...form, amount: String(amt) })}
-                    className="px-3 py-1.5 rounded-full text-xs font-bold border border-pink-300 text-pink-700 bg-pink-50 hover:bg-pink-100 transition-colors">
+                    className="px-3 py-1.5 rounded-full text-xs font-bold border border-fuchsia-300 text-pink-700 bg-rose-100 hover:bg-fuchsia-100 transition-colors">
                     ₹{amt}
                   </button>
                 ))}

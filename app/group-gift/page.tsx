@@ -87,7 +87,7 @@ export default function GroupGiftPage() {
                       key={cake.id}
                       onClick={() => setSelectedCake(cake)}
                       className={`flex items-center justify-between p-4 rounded-2xl border-2 transition-all text-left ${
-                        selectedCake.id === cake.id ? "border-pink-600 bg-pink-50/30" : "border-gray-200"
+                        selectedCake.id === cake.id ? "border-rose-500 bg-rose-100/30" : "border-gray-200"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -123,10 +123,10 @@ export default function GroupGiftPage() {
               </div>
 
               {/* Summary */}
-              <div className="bg-pink-50 border border-pink-200 rounded-2xl p-4 flex items-center gap-3">
-                <IndianRupee size={20} className="text-pink-600 flex-shrink-0" />
+              <div className="bg-rose-100 border border-fuchsia-300 rounded-2xl p-4 flex items-center gap-3">
+                <IndianRupee size={20} className="text-rose-600 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="font-bold text-pink-900">Target Amount: ₹{selectedCake.price}</p>
+                  <p className="font-bold text-rose-950">Target Amount: ₹{selectedCake.price}</p>
                   <p className="text-pink-700 text-xs">Share the link with friends — each person can contribute any amount</p>
                 </div>
               </div>

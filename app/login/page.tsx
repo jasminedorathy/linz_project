@@ -104,7 +104,7 @@ export default function LoginPage() {
             <button
               onClick={() => { setIsLogin(true); setErrorMsg(""); }}
               className={`flex-1 pb-3 text-center border-b-2 transition-all ${
-                isLogin ? "border-pink-600 text-pink-600 font-bold" : "border-transparent text-gray-400"
+                isLogin ? "border-rose-500 text-rose-600 font-bold" : "border-transparent text-gray-400"
               }`}
             >
               Sign In
@@ -112,7 +112,7 @@ export default function LoginPage() {
             <button
               onClick={() => { setIsLogin(false); setErrorMsg(""); }}
               className={`flex-1 pb-3 text-center border-b-2 transition-all ${
-                !isLogin ? "border-pink-600 text-pink-600 font-bold" : "border-transparent text-gray-400"
+                !isLogin ? "border-rose-500 text-rose-600 font-bold" : "border-transparent text-gray-400"
               }`}
             >
               Create Account
@@ -200,9 +200,9 @@ export default function LoginPage() {
                 {signupErrors.password && <p className="text-red-500 text-xs mt-1">{signupErrors.password.message}</p>}
               </div>
 
-              <div className="bg-pink-50 p-4 rounded-2xl flex items-center gap-3 border border-pink-100">
-                <Sparkles size={20} className="text-pink-500 flex-shrink-0" />
-                <p className="text-xs text-pink-900 leading-normal">
+              <div className="bg-rose-100 p-4 rounded-2xl flex items-center gap-3 border border-rose-200">
+                <Sparkles size={20} className="text-fuchsia-600 flex-shrink-0" />
+                <p className="text-xs text-rose-950 leading-normal">
                   Receive **120 loyalty points** instantly upon signing up! Redeemable for a free cookie on your next visit.
                 </p>
               </div>

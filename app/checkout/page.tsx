@@ -270,7 +270,7 @@ export default function CheckoutPage() {
                     <button
                       key={id} type="button"
                       onClick={() => { setOrderType(id as any); setValue("orderType", id as any); }}
-                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all ${orderType === id ? "border-pink-600 bg-pink-50/30" : "border-gray-200 bg-white"}`}
+                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all ${orderType === id ? "border-rose-500 bg-rose-100/30" : "border-gray-200 bg-white"}`}
                     >
                       <Icon size={24} style={{ color: orderType === id ? "var(--color-primary)" : "#6b7280" }} />
                       <span className="text-sm font-semibold">{label}</span>
@@ -349,7 +349,7 @@ export default function CheckoutPage() {
                     <button
                       key={id} type="button"
                       onClick={() => { setPaymentMethod(id as any); setValue("paymentMethod", id as any); }}
-                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all text-center ${paymentMethod === id ? "border-pink-600 bg-pink-50/30" : "border-gray-200 bg-white"}`}
+                      className={`flex flex-col items-center gap-2 p-4 rounded-2xl border-2 transition-all text-center ${paymentMethod === id ? "border-rose-500 bg-rose-100/30" : "border-gray-200 bg-white"}`}
                     >
                       <Icon size={22} style={{ color: paymentMethod === id ? "var(--color-primary)" : "#6b7280" }} />
                       <span className="text-sm font-bold">{label}</span>

@@ -14,17 +14,17 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(ellipse at 60% 40%, rgba(236,72,153,0.15) 0%, transparent 70%), linear-gradient(135deg, rgba(255,241,247,0.8) 0%, rgba(252,231,243,0.4) 100%)",
+            "radial-gradient(ellipse at 60% 40%, rgba(194,26,67,0.25) 0%, transparent 75%), linear-gradient(135deg, rgba(255,225,232,0.9) 0%, rgba(255,190,205,0.5) 100%)",
         }}
       />
 
       {/* Decorative circles */}
       <div
-        className="absolute top-24 right-16 w-72 h-72 rounded-full opacity-10 blur-3xl"
+        className="absolute top-24 right-16 w-72 h-72 rounded-full opacity-20 blur-3xl"
         style={{ backgroundColor: "var(--color-primary)" }}
       />
       <div
-        className="absolute bottom-16 left-10 w-56 h-56 rounded-full opacity-10 blur-2xl"
+        className="absolute bottom-16 left-10 w-56 h-56 rounded-full opacity-20 blur-2xl"
         style={{ backgroundColor: "var(--color-primary)" }}
       />
 
@@ -61,7 +61,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="text-pink-900/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-rose-950/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Discover our world of handcrafted cakes, artisan pastries, and freshly baked delights — made fresh every morning for every special moment.
         </motion.p>
@@ -88,7 +88,7 @@ export default function HeroSection() {
             <Link
               href="/custom-cake"
               id="hero-order-btn"
-              className="inline-block font-semibold px-8 py-4 rounded-full text-base border-2 text-pink-950 transition-colors hover:bg-pink-50"
+              className="inline-block font-semibold px-8 py-4 rounded-full text-base border-2 text-pink-950 transition-colors hover:bg-rose-100"
               style={{ borderColor: "rgba(236,72,153,0.3)" }}
             >
               Order a Custom Cake

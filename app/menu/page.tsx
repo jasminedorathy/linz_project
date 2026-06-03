@@ -57,11 +57,11 @@ export default function MenuPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setActiveCategory(cat)}
-                className="px-6 py-2.5 rounded-full text-sm font-semibold border-2 transition-colors duration-200"
+                className="px-6 py-2.5 rounded-full text-sm font-semibold border-2 transition-all duration-200 shadow-xs cursor-pointer"
                 style={{
-                  backgroundColor: activeCategory === cat ? "var(--color-primary)" : "transparent",
-                  color: activeCategory === cat ? "#fff" : "var(--color-primary)",
-                  borderColor: "var(--color-primary)",
+                  backgroundColor: activeCategory === cat ? "var(--color-primary)" : "#ffffff",
+                  color: activeCategory === cat ? "#ffffff" : "var(--color-primary)",
+                  borderColor: activeCategory === cat ? "var(--color-primary)" : "rgba(194, 26, 67, 0.25)",
                 }}
               >
                 {cat}

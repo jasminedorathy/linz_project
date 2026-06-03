@@ -80,8 +80,8 @@ export default function ConsultationBookingPage() {
           animate={{ opacity: 1, scale: 1 }}
           className="max-w-xl w-full mx-6 bg-white rounded-3xl p-8 shadow-xl text-center flex flex-col items-center gap-6"
         >
-          <div className="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center">
-            <CheckCircle2 size={44} className="text-pink-600" />
+          <div className="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center">
+            <CheckCircle2 size={44} className="text-rose-600" />
           </div>
           <div>
             <h1 className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
@@ -163,7 +163,7 @@ export default function ConsultationBookingPage() {
                 <div
                   key={type.id}
                   className={`p-6 rounded-2xl border bg-white transition-all ${
-                    watchType === type.id ? "border-pink-600 ring-2 ring-pink-50" : "border-gray-100"
+                    watchType === type.id ? "border-rose-500 ring-2 ring-pink-50" : "border-gray-100"
                   }`}
                 >
                   <div className="flex justify-between items-start gap-4">
@@ -176,7 +176,7 @@ export default function ConsultationBookingPage() {
                     <span
                       className={`text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full ${
                         watchType === type.id
-                          ? "bg-pink-600 text-white"
+                          ? "bg-rose-600 text-white"
                           : "bg-gray-100 text-gray-500"
                       }`}
                     >
@@ -205,7 +205,7 @@ export default function ConsultationBookingPage() {
                       type="button"
                       onClick={() => setValue("consultationType", t.id as any)}
                       className={`py-2 px-3 rounded-lg border text-xs font-semibold text-center transition-all ${
-                        watchType === t.id ? "bg-pink-600 text-white border-pink-600" : "bg-white text-gray-500 border-gray-200"
+                        watchType === t.id ? "bg-rose-600 text-white border-rose-500" : "bg-white text-gray-500 border-gray-200"
                       }`}
                     >
                       {t.id === "wedding" ? "Wedding" : t.id === "milestone" ? "Milestone" : "Corporate"}
